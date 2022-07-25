@@ -14,20 +14,16 @@ h1{
     font-size: 25px; 
 }
 
-@media (min-width: 481px){
-    
-    h1{
-        font-size: 30px;
-    }
-
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (min-width: 1025px){
-
-    h1{
-        font-size: 40px;
-    }
-
+.content{
+    flex-grow: 1;
+    justify-items: center;
+    align-items: center;
 }
 
 img{
@@ -42,20 +38,7 @@ a{
     text-decoration: none;
 }
 
-.gridMain{
-    display: grid;
-    grid-template-areas: 
-        "header"
-        "history"
-        "services"
-        "projects"
-        "certifications"
-        "contact"
-        "footer";
-}
-
 header{
-    grid-area: header;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,53 +46,7 @@ header{
     margin-bottom: 50px;
 }
 
-@media (min-width: 481px){
-    
-    header{
-        margin-bottom: 0;
-    }
-    
-    header li{
-        display: inline-block;
-    }
-
-    nav{
-        width: 100%;
-    }
-
-    header ul{
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-}
-
-@media (min-width: 1025px){
-    
-    header nav{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 15px 0;
-    }
-
-    header .container-logo{
-        display: flex;
-        justify-content: start;
-        padding-left: 15px;
-    }
-
-    header div{
-        display: inline-block;
-    }
-    
-    a{
-        font-size: 15px;
-    }
-
-}
-
 #history{
-    grid-area: history;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,39 +58,7 @@ header{
     width: 50%;
 }
 
-@media (min-width: 481px){
-    
-    #history .profile-pic{
-        width: 250px;
-    }
-
-}
-
-@media (min-width: 769px){
-    
-    #history .profile-pic{
-        width: 50%;
-    }
-
-}
-
-@media (min-width: 1025px){
-
-    #history p{
-        margin-right: 50px;
-    }
-
-    #history .history-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        margin-bottom: 50px;
-    }
-
-}
-
 #services{
-    grid-area: services;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,22 +66,7 @@ header{
     margin-bottom: 50px;
 }
 
-@media (min-width: 1025px){
-
-    #services .services-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin-bottom: 50px;
-    }
-
-    .services-content p{
-        padding: 0px 50px 0 50px;
-    }
-
-}
-
 #projects{
-    grid-area: projects;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,21 +79,7 @@ header{
     margin-bottom: 10px;
 }
 
-@media (min-width: 1025px){
-
-    .projects-gallery{
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #projects img{
-        width: 300px;
-    }
-
-}
-
 #certifications{
-    grid-area: certifications;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,22 +92,7 @@ header{
     margin-bottom: 10px;
 }
 
-@media (min-width: 1025px){
-
-    .certifications-gallery{
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #certifications img{
-        width: 300px;
-        margin: 0 50px 10px 20px;
-    }
-
-}
-
 #contact{
-    grid-area: contact;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,30 +101,8 @@ header{
 }
 
 #contact img{
-    width: 25%;
+    width: 150px;
     margin-bottom: 10px;
-}
-
-@media (min-width: 481px){
-    .contact-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-    }
-
-    #contact img{
-        width: 50%;
-    }
-}
-
-@media (min-width: 1025px){
-
-    #contact img{
-
-        width: 25%;
-
-    }
-
 }
 
 .form-button{
@@ -280,17 +119,19 @@ input{
 }
 
 footer{
-    grid-area: footer;
     display: flex;
     flex-direction: column;
+    align-content: center;
     justify-content: center;
-    align-items: center;
     background-color: dimgray;
+    height: 5vh;
 }
 
 footer p{
     background: none;
 }
+
+
 
 /*------HISTORY.HTML FROM HERE------*/
 
@@ -309,8 +150,149 @@ footer p{
     margin-bottom: 50px;
 }
 
+/*------SERVICES.HTML FROM HERE------*/
+
+.services-content{
+    padding: 0 50px;
+}
+
+.services-content h2{
+    margin-bottom: 25px;
+}
+
+/*------PROJECTS.HTML AND CERTIFIATIONS.HTML FROM HERE------*/
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img{
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 50px;
+}
+
 @media (min-width: 1025px){
 
+}
+
+
+/*---------MEDIA QUERIES---------*/
+
+@media (min-width: 768px){
+    
+    h1{
+        font-size: 30px;
+    }
+    
+    header{
+        margin-bottom: 0;
+    }
+    
+    header li{
+        display: inline-block;
+    }
+
+    header ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .grid-3-col{
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #services div{
+        max-width: 20vw;
+    }
+
+    /***services.html***/    
+    .services-content{
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    /***project and certifications.html***/
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+}
+
+@media (min-width: 1024px){
+
+    h1{
+        font-size: 40px;
+    }
+    
+    header .container-logo{
+        display: flex;
+        justify-content: start;
+        padding-left: 15px;
+    }
+
+    header div{
+        display: inline-block;
+    }
+    
+    a{
+        font-size: 15px;
+    }
+    
+    #history .profile-pic{
+        width: 50%;
+    }
+
+    #history p{
+        margin-right: 50px;
+    }
+
+    .grid-2-col{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    #services .services-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 50px;
+    }
+
+    .services-content p{
+        padding: 0px 50px 0 50px;
+    }
+
+    .projects-gallery{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #projects img{
+        width: 300px;
+    }
+
+    .certifications-gallery{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #certifications img{
+        width: 300px;
+        margin: 0 50px 10px 20px;
+    }
+
+    /***history.html***/    
     .history-page{
         display: grid;
         grid-template-areas:
@@ -344,62 +326,13 @@ footer p{
         padding: 0 100px;
     }
 
-}
-
-/*------SERVICES.HTML FROM HERE------*/
-
-.services-content{
-    padding: 0 50px;
-}
-
-.services-content h2, p{
-    margin-bottom: 25px;
-}
-
-@media (min-width: 481px){
-
-    .services-content{
-        width: 50%;
-        margin: 0 auto;
-    }
-
-}
-
-@media (min-width: 1025px){
-
+    /***services.html***/
     .services-content{
         width: 600px;
     }
 
-}
 
-/*------PROJECTS.HTML AND CERTIFIATIONS.HTML FROM HERE------*/
-
-.gallery{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.gallery img{
-    display: inline-block;
-    width: 70%;
-    margin-bottom: 50px;
-}
-
-@media (min-width: 481px){
-
-    .gallery{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-    }
-
-}
-
-@media (min-width: 1025px){
-
+    /***projects and certificactions.html***/
     .gallery{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
