@@ -1,6 +1,5 @@
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
     color: #fff;
     padding: 0;
     margin: 0;
@@ -12,6 +11,7 @@ body{
     background-color: #222222;
     background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
     background-size: 25px 25px;
+    font-size: 0.75em;
 }
 
 button,.form-button{
@@ -19,6 +19,7 @@ button,.form-button{
     color: #71db77;
     padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 25px;
 }
 
 button:hover{
@@ -30,9 +31,8 @@ button:hover{
 
 h1{
     margin-bottom: 50px;   
-    font-size: 25px;
+    font-size: 2rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
-
 }
 
 .wrapper{
@@ -75,6 +75,8 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    padding: 0 25px;
+
 }
 
 #history .profile-pic{
@@ -88,6 +90,7 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    padding: 0 25px;
 }
 
 #projects{
@@ -96,6 +99,7 @@ header{
     justify-content: center;
     align-content: center;
     margin-bottom: 50px;
+    padding: 0 25px;
 }
 
 #projects img{
@@ -109,6 +113,7 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    padding: 0 25px;
 }
 
 #certifications img{
@@ -122,6 +127,7 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    padding: 0 25px;
 }
 
 #contact img{
@@ -143,6 +149,7 @@ footer{
     justify-content: center;
     background-color: dimgray;
     height: 5vh;
+    margin-top: 5vh;
 }
 
 footer p{
@@ -155,7 +162,6 @@ footer p{
 
 .history-title{
     margin-bottom: 50px;
-    font-size: 30px;
 }
 
 .history-page img{
@@ -178,7 +184,20 @@ footer p{
     margin-bottom: 25px;
 }
 
-/*------PROJECTS.HTML AND CERTIFIATIONS.HTML FROM HERE------*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+
+/*------PROJECTS.HTML FROM HERE------*/
 
 .gallery{
     display: flex;
@@ -193,15 +212,33 @@ footer p{
     margin-bottom: 50px;
 }
 
-@media (min-width: 1025px){
+/*------CERTIFICATIONS.HTML FROM HERE------*/
 
+#certifications-page{
+    padding: 0 50px;
 }
 
+#certifications-page img{
+    width: 50vw;
+    margin: 5vh 0;
+}
+
+#certifications-page h2{
+    margin-bottom: 2.5vh;
+}
+
+#certifications-page h3{
+    margin-bottom: 5vh;
+}
 
 /*---------MEDIA QUERIES---------*/
 
 @media (min-width: 768px){
     
+    body{
+        font-size: 0.85rem;
+    }
+
     h1{
         font-size: 30px;
     }
@@ -215,6 +252,7 @@ footer p{
     }
 
     header ul{
+        width: 100%;
         display: flex;
         justify-content: space-evenly;
     }
@@ -227,17 +265,12 @@ footer p{
         justify-items: center;
     }
 
-    #services div{
-        max-width: 20vw;
-    }
-
     /***services.html***/    
     .services-content{
-        width: 50%;
         margin: 0 auto;
     }
     
-    /***project and certifications.html***/
+    /***project.html***/
     .gallery{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -247,6 +280,10 @@ footer p{
 }
 
 @media (min-width: 1024px){
+
+    body{
+        font-size: 1rem;
+    }
 
     h1{
         font-size: 40px;
@@ -357,10 +394,232 @@ footer p{
     }
 
 
-    /***projects and certificactions.html***/
+    /***projects.html***/
     .gallery{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    /***certifications.html***/
+    #certifications-page{
+        display: grid;
+        grid-template-areas:
+            "pic1 text1"
+            "text2 pic2"
+            "pic3 text3";
+        align-items: center;
+        justify-items: center;
+    }
+
+       /***certifications.html***/
+       #certifications-page img{
+        width: 33.33vw;
+    }
+
 }
+
+
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+  
+  
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+  }
+  
+  
+  .carousel {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+    height: 100px;
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+  }
+   
+  .carousel__slide:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-40%,70px);
+    color: #fff;
+    font-size: 2em;
+  }
+  
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+  
+  .carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  .carousel__navigation-list,
+  .carousel__navigation-item {
+    display: inline-block;
+  }
+  
+  .carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+  
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+  }
+  
+  .carousel::before,
+  .carousel__prev {
+    left: -1rem;
+  }
+  
+  .carousel::after,
+  .carousel__next {
+    right: -1rem;
+  }
+  
+  .carousel::before,
+  .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: rgba(51, 51, 51, 0.744);
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  .carousel::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+  }
+  
+  .carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+  }
