@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css\styles.css">
-    <title>BrC Web Developer - SARASA</title>
+    <title>BrC Web Developer - Certifications</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="content">
-            <header class="grid-2-col">
+            <header class="grid-2-col wow animate__animated animate__fadeIn">
                 <div class="container-logo">
                     <a href="index.html"><img src="images\logo.png" alt="BrC-logo" class="logo"></a>
                 </div>
@@ -22,31 +23,35 @@
                     <li><a href="index.html#contact">CONTACT ME</a></li>
                 </ul>
             </header>
-            <h1>WHERE DID I LEARN WHAT I KNOW?</h1>
+            <h1 class="wow animate__animated animate__fadeIn">WHERE DID I LEARN WHAT I KNOW?</h1>
             <div id="certifications-page">
-                <img src="images\desarrollo.jpg" class="pic1" alt="">
-                <div class="text1">
+                <img src="images\desarrollo.jpg" class="pic1 wow animate__animated animate__flipInY" alt="">
+                <div class="text1 wow animate__animated animate__fadeIn">
                     <h2>Desarrollo Web</h2>
                     <h3>CODERHOUSE</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam non iure cupiditate tenetur consequuntur autem dolorum harum nobis fuga quam ab incidunt illo vero esse, at a facilis expedita totam quos quas, atque ut. Quos ratione accusamus libero perspiciatis repudiandae ab iusto beatae fugiat quidem?</p>
                 </div>
-                <img src="images\react.jpg" class="pic2" alt="">
-                <div class="text2">
+                <img src="images\react.jpg" class="pic2 wow animate__animated animate__flipInY" alt="">
+                <div class="text2 wow animate__animated animate__fadeIn">
                     <h2>React JS</h2>
                     <h3>CODERHOUSE</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam non iure cupiditate tenetur consequuntur autem dolorum harum nobis fuga quam ab incidunt illo vero esse, at a facilis expedita totam quos quas, atque ut. Quos ratione accusamus libero perspiciatis repudiandae ab iusto beatae fugiat quidem?</p>
                 </div>
-                <img src="images\okupas.png" class="pic3" alt="">
-                <div class="text3">
+                <img src="images\okupas.png" class="pic3 wow animate__animated animate__flipInY" alt="">
+                <div class="text3 wow animate__animated animate__fadeIn">
                     <h2>Código</h2>
                     <h3>LA CALLE PAPÁ</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam non iure cupiditate tenetur consequuntur autem dolorum harum nobis fuga quam ab incidunt illo vero esse, at a facilis expedita totam quos quas, atque ut. Quos ratione accusamus libero perspiciatis repudiandae ab iusto beatae fugiat quidem?</p>
                 </div>
             </div>
         </div>
-        <footer>
+        <footer class="wow animate__animated animate__fadeIn">
             <p>Sitio desarrollado por Brian Cisneros - BrC WebDev ©2022</p>
         </footer>
     </div>
+    <script src="https://cdn.boomcdn.com/libs/wow-js/1.3.0/wow.min.js"></script>
+    <script>
+       new WOW().init();
+    </script>
 </body>
 </html>
