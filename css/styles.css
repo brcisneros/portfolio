@@ -459,3 +459,16 @@ footer p {
 
 .carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E"); }
+
+/*** SASS para la entrega ***/
+#projects-page {
+  background-color: aquamarine; }
+  #projects-page .gallery {
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly; }
+  #projects-page h1 {
+    color: blue; }
+    #projects-page h1:hover {
+      color: #71db77;
+      background-color: #fff; }
