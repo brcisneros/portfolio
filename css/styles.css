@@ -7,23 +7,9 @@
   text-align: center; }
 
 body {
-  background-color: #222222;
   background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
   background-size: 25px 25px;
   font-size: 0.75em; }
-
-button, .form-button {
-  background-color: rgba(47, 47, 47, 0.75);
-  color: #71db77;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 25px; }
-
-button:hover {
-  color: black;
-  border: solid 1px #71db77;
-  background-color: white;
-  font-weight: bold; }
 
 h1 {
   margin-bottom: 50px;
@@ -55,60 +41,19 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  padding: 15px;
-  background-color: rgba(14, 14, 14, 0.5); }
-
-#history {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  padding: 0 25px; }
+  padding: 15px; }
 
 #history .profile-pic {
   width: 50%;
   border-radius: 50%; }
 
-#services {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  padding: 0 25px; }
-
-#projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 50px;
-  padding: 0 25px; }
-
 #projects img {
   width: 75%;
   margin-bottom: 10px; }
 
-#certifications {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  padding: 0 25px; }
-
 #certifications img {
   width: 75%;
   margin-bottom: 10px; }
-
-#contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  padding: 0 25px; }
 
 #contact img {
   width: 150px;
@@ -125,7 +70,6 @@ footer {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  background-color: dimgray;
   height: 5vh;
   margin-top: 5vh; }
 
@@ -202,7 +146,6 @@ footer p {
     display: flex;
     justify-content: space-evenly; }
   .grid-3-col {
-    width: 90vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -250,10 +193,11 @@ footer p {
   .services-content p {
     padding: 0px 50px 0 50px; }
   .projects-gallery {
-    display: flex;
-    justify-content: space-evenly; }
+    display: flex !important;
+    justify-content: space-evenly !important; }
   #projects img {
-    width: 300px; }
+    width: 300px;
+    padding: 0 25px; }
   .certifications-gallery {
     display: flex;
     justify-content: space-evenly; }
@@ -460,15 +404,40 @@ footer p {
 .carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E"); }
 
-/*** SASS para la entrega ***/
-#projects-page {
-  background-color: aquamarine; }
-  #projects-page .gallery {
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly; }
-  #projects-page h1 {
-    color: blue; }
-    #projects-page h1:hover {
-      color: #71db77;
-      background-color: #fff; }
+/*** SASS provisorio para la entrega ***/
+#history, #services, #projects, #certifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 0 25px; }
+
+button, .form-button {
+  border: solid 2px;
+  border-radius: 5px;
+  background-color: rgba(47, 47, 47, 0.75);
+  color: #71db77;
+  padding: 10px 20px;
+  margin-top: 25px; }
+  button:hover, .form-button:hover {
+    background-color: white;
+    color: black;
+    border: solid 1px #71db77;
+    font-weight: bold; }
+
+.form-button {
+  background-color: white;
+  color: black;
+  border: solid 1px #71db77; }
+  .form-button:hover {
+    background-color: rgba(47, 47, 47, 0.75);
+    color: #71db77;
+    border: solid 2px #000000;
+    font-weight: bold; }
+
+body {
+  background-color: #222222; }
+
+header, footer {
+  background-color: rgba(14, 14, 14, 0.5); }

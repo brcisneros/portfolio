@@ -8,25 +8,9 @@
 }
 
 body{
-    background-color: #222222;
     background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
     background-size: 25px 25px;
     font-size: 0.75em;
-}
-
-button,.form-button{
-    background-color: rgba(47, 47, 47, 0.75);
-    color: #71db77;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 25px;
-}
-
-button:hover{
-    color: black;
-    border: solid 1px #71db77;
-    background-color: white;
-    font-weight: bold;
 }
 
 h1{
@@ -66,69 +50,27 @@ header{
     align-items: center;
     margin-bottom: 50px;
     padding: 15px;
-    background-color: rgba(14, 14, 14, .5);
 }
 
-#history{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    padding: 0 25px;
-
-}
 
 #history .profile-pic{
     width: 50%;
     border-radius: 50%;
 }
 
-#services{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    padding: 0 25px;
-}
 
-#projects{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 50px;
-    padding: 0 25px;
-}
 
 #projects img{
     width: 75%;
     margin-bottom: 10px;
 }
 
-#certifications{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    padding: 0 25px;
-}
 
 #certifications img{
     width: 75%;
     margin-bottom: 10px;
 }
 
-#contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    padding: 0 25px;
-}
 
 #contact img{
     width: 150px;
@@ -147,7 +89,6 @@ footer{
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: dimgray;
     height: 5vh;
     margin-top: 5vh;
 }
@@ -256,7 +197,6 @@ footer p{
     }
 
     .grid-3-col{
-        width: 90vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
@@ -334,12 +274,13 @@ footer p{
     }
 
     .projects-gallery{
-        display: flex;
-        justify-content: space-evenly;
+        display: flex !important;
+        justify-content: space-evenly !important;
     }
 
     #projects img{
         width: 300px;
+        padding: 0 25px;
     }
 
     .certifications-gallery{
@@ -622,23 +563,65 @@ footer p{
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
   }
 
-  /*** SASS para la entrega ***/
+  /*** SASS provisorio para la entrega ***/
 
-#projects-page{
-     background-color: aquamarine;
+$button-color: rgba(47, 47, 47, .75);
+$button-color-alt: white;
+$button-text: #71db77;
+$button-text-alt: black;
 
-     .gallery{
-        width: 100%;
-        align-items: center;
-        justify-content: space-evenly;
-     } 
+@mixin round-border ($style, $radius){
+  border: $style;
+  border-radius: $radius;
+}
 
-     h1{
-        color: blue;
+$palette:(
+  main-bground: #222222,
+  clear-bground: rgba(14, 14, 14, .5),
+);
 
-        &:hover{
-            color: #71db77;
-            background-color: #fff;
-        }
-     }
+#history, #services, #projects, #certifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 0 25px;
+}
+
+button{
+  @include round-border(solid 2px, 5px);
+  background-color: $button-color;
+  color: $button-text;
+  padding: 10px 20px;
+  margin-top: 25px;
+
+  &:hover{
+      background-color: $button-color-alt;
+      color: $button-text-alt;
+      border: solid 1px #71db77;
+      font-weight: bold;
+  }
+}
+
+.form-button{
+  @extend button;
+  background-color: $button-color-alt;
+  color: $button-text-alt;
+  border: solid 1px #71db77;
+
+  &:hover{
+    background-color: $button-color;
+    color: $button-text;
+    border: solid 2px #000000;
+    font-weight: bold;
+  }
+}
+
+body{
+  background-color: map-get($palette, main-bground);
+}
+
+header, footer{
+  background-color: map-get($palette, clear-bground);
 }
