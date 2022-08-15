@@ -1,81 +1,3 @@
-* {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #fff;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center; }
-
-body {
-  background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
-  background-size: 25px 25px;
-  font-size: 0.75em; }
-
-h1 {
-  margin-bottom: 50px;
-  font-size: 2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75); }
-
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column; }
-
-.content {
-  flex-grow: 1;
-  justify-items: center;
-  align-items: center; }
-
-img {
-  max-width: 100%; }
-
-.logo {
-  width: 150px; }
-
-a {
-  text-decoration: none; }
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  padding: 15px; }
-
-#history .profile-pic {
-  width: 50%;
-  border-radius: 50%; }
-
-#projects img {
-  width: 75%;
-  margin-bottom: 10px; }
-
-#certifications img {
-  width: 75%;
-  margin-bottom: 10px; }
-
-#contact img {
-  width: 150px;
-  margin-bottom: 10px; }
-
-input {
-  display: block;
-  margin-bottom: 10px;
-  margin-right: auto;
-  margin-left: auto; }
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  height: 5vh;
-  margin-top: 5vh; }
-
-footer p {
-  background: none; }
-
 /*------HISTORY.HTML FROM HERE------*/
 .history-title {
   margin-bottom: 50px; }
@@ -125,122 +47,12 @@ footer p {
   width: 50vw;
   margin: 5vh 0; }
 
-#certifications-page h2 {
+#certifications-page h3 {
   margin-bottom: 2.5vh; }
 
-#certifications-page h3 {
+#certifications-page h4 {
   margin-bottom: 5vh; }
 
-/*---------MEDIA QUERIES---------*/
-@media (min-width: 768px) {
-  body {
-    font-size: 0.85rem; }
-  h1 {
-    font-size: 30px; }
-  header {
-    margin-bottom: 0; }
-  header li {
-    display: inline-block; }
-  header ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly; }
-  .grid-3-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center; }
-  /***services.html***/
-  .services-content {
-    margin: 0 auto; }
-  /***project.html***/
-  .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center; } }
-
-@media (min-width: 1024px) {
-  body {
-    font-size: 1rem; }
-  h1 {
-    font-size: 40px; }
-  header .container-logo {
-    display: flex;
-    justify-content: start;
-    padding-left: 15px; }
-  header div {
-    display: inline-block; }
-  header li a:hover {
-    padding: 10px 20px;
-    background-color: rgba(47, 47, 47, 0.75);
-    color: #71db77;
-    border: solid 1px #71db77; }
-  a {
-    font-size: 15px; }
-  #history .profile-pic {
-    width: 50%; }
-  #history p {
-    margin-right: 50px; }
-  .grid-2-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    margin-bottom: 50px; }
-  #services .services-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 50px; }
-  .services-content p {
-    padding: 0px 50px 0 50px; }
-  .projects-gallery {
-    display: flex !important;
-    justify-content: space-evenly !important; }
-  #projects img {
-    width: 300px;
-    padding: 0 25px; }
-  .certifications-gallery {
-    display: flex;
-    justify-content: space-evenly; }
-  #certifications img {
-    width: 300px;
-    margin: 0 50px 10px 20px; }
-  /***history.html***/
-  .history-page {
-    display: grid;
-    grid-template-areas: "pic1 text1" "text2 pic2" "text3 text3";
-    align-items: center;
-    justify-items: center; }
-  .pic1 {
-    grid-area: pic1; }
-  .pic2 {
-    grid-area: pic2; }
-  .text1 {
-    grid-area: text1;
-    padding: 0 50px; }
-  .text2 {
-    grid-area: text2;
-    padding: 0 50px; }
-  .text3 {
-    grid-area: text3;
-    padding: 0 100px; }
-  /***services.html***/
-  .services-content {
-    width: 600px; }
-  /***projects.html***/
-  .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; }
-  /***certifications.html***/
-  #certifications-page {
-    display: grid;
-    grid-template-areas: "pic1 text1" "text2 pic2" "pic3 text3";
-    align-items: center;
-    justify-items: center; }
-  /***certifications.html***/
-  #certifications-page img {
-    width: 33.33vw; } }
-
-/***CAROUSEL CODE***/
 @keyframes tonext {
   75% {
     left: 0; }
@@ -404,14 +216,19 @@ footer p {
 .carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E"); }
 
-/*** SASS provisorio para la entrega ***/
-#history, #services, #projects, #certifications {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  padding: 0 25px; }
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center; }
+
+body {
+  background-color: #222222;
+  background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
+  background-size: 25px 25px;
+  font-size: 0.75em; }
 
 button, .form-button {
   border: solid 2px;
@@ -426,6 +243,17 @@ button, .form-button {
     border: solid 1px #71db77;
     font-weight: bold; }
 
+header, footer {
+  background-color: rgba(14, 14, 14, 0.5); }
+
+#history, #services, #projects, #certifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 0 25px; }
+
 .form-button {
   background-color: white;
   color: black;
@@ -436,8 +264,186 @@ button, .form-button {
     border: solid 2px #000000;
     font-weight: bold; }
 
-body {
-  background-color: #222222; }
+h2 {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75); }
 
-header, footer {
-  background-color: rgba(14, 14, 14, 0.5); }
+h3 {
+  font-size: 1.75rem; }
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.content {
+  flex-grow: 1;
+  justify-items: center;
+  align-items: center; }
+
+img {
+  max-width: 100%; }
+
+.logo {
+  width: 150px; }
+
+a {
+  text-decoration: none; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 15px; }
+
+#history .profile-pic {
+  width: 50%;
+  border-radius: 50%; }
+
+#projects img {
+  width: 75%;
+  margin-bottom: 10px; }
+
+#certifications img {
+  width: 75%;
+  margin-bottom: 10px; }
+
+#contact img {
+  width: 20%;
+  margin-bottom: 50px; }
+
+input, textarea {
+  display: block;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px 10px; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 5vh;
+  margin-top: 5vh; }
+
+footer p {
+  background: none; }
+
+/*---------MEDIA QUERIES---------*/
+@media (min-width: 768px) {
+  body {
+    font-size: 0.85rem; }
+  h2 {
+    font-size: 30px; }
+  header {
+    margin-bottom: 0; }
+  header li {
+    display: inline-block; }
+  header ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; }
+  .grid-3-col {
+    display: grid;
+    grid-template-areas: "whatsapp contact-form email";
+    align-items: center;
+    justify-items: center; }
+  .whatsapp {
+    grid-area: whatsapp; }
+  .contact-form {
+    grid-area: contact-form; }
+  .email {
+    grid-area: email; }
+  /***services.html***/
+  .services-content {
+    margin: 0 auto; }
+  /***project.html***/
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center; } }
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1rem; }
+  h2 {
+    font-size: 40px; }
+  header .container-logo {
+    display: flex;
+    justify-content: start;
+    padding-left: 15px; }
+  header div {
+    display: inline-block; }
+  header li a:hover {
+    padding: 10px 20px;
+    background-color: rgba(47, 47, 47, 0.75);
+    color: #71db77;
+    border: solid 1px #71db77; }
+  a {
+    font-size: 15px; }
+  #history .profile-pic {
+    width: 50%; }
+  #history p {
+    margin-right: 50px; }
+  .grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 50px; }
+  #services .services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 50px; }
+  .services-content p {
+    padding: 0px 50px 0 50px; }
+  .projects-gallery {
+    display: flex !important;
+    justify-content: space-evenly !important; }
+  #projects img {
+    width: 300px;
+    padding: 0 25px; }
+  .certifications-gallery {
+    display: flex;
+    justify-content: space-evenly; }
+  #certifications img {
+    width: 300px;
+    margin: 0 50px 10px 20px; }
+  /***history.html***/
+  .history-page {
+    display: grid;
+    grid-template-areas: "pic1 text1" "text2 pic2" "text3 text3";
+    align-items: center;
+    justify-items: center; }
+  .pic1 {
+    grid-area: pic1; }
+  .pic2 {
+    grid-area: pic2; }
+  .text1 {
+    grid-area: text1;
+    padding: 0 50px; }
+  .text2 {
+    grid-area: text2;
+    padding: 0 50px; }
+  .text3 {
+    grid-area: text3;
+    padding: 0 100px; }
+  /***services.html***/
+  .services-content {
+    width: 600px; }
+  /***projects.html***/
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+  /***certifications.html***/
+  #certifications-page {
+    display: grid;
+    grid-template-areas: "pic1 text1" "text2 pic2" "pic3 text3";
+    align-items: center;
+    justify-items: center; }
+  /***certifications.html***/
+  #certifications-page img {
+    width: 33.33vw; } }
