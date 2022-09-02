@@ -11,7 +11,7 @@
 
 .history-page p{
     margin: 0 25px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 /*------SERVICES.HTML FROM HERE------*/
@@ -34,10 +34,16 @@
   }
   
   .container {
-    padding: 2px 16px;
+    padding: 0 16px 16px 16px;
   }
 
 /*------PROJECTS.HTML FROM HERE------*/
+
+.projects-intro{
+    margin-bottom: 10vh;
+    font-size: 1.5rem;
+    padding: 0 1vh;
+}
 
 .gallery{
     display: flex;
@@ -49,7 +55,12 @@
 .gallery img{
     display: inline-block;
     width: 70%;
-    margin-bottom: 50px;
+    margin-bottom: 1.5vh;
+}
+
+.project-card{
+    max-width: 80%;
+    margin-bottom: 5vh;
 }
 
 /*------CERTIFICATIONS.HTML FROM HERE------*/
