@@ -70,6 +70,7 @@ header, footer{
     align-items: center;
     margin-bottom: 50px;
     padding: 0 25px;
+    height: 90vh;
 }
 
 .form-button{
@@ -129,6 +130,10 @@ p{
   margin-top: 15px;
 }
 
+#services p{
+    margin-bottom: 2vh;
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -140,7 +145,12 @@ header{
 
 #history .profile-pic{
     width: 50%;
-    border-radius: 50%;
+    border-radius: 45%;
+}
+
+#services .fa-solid{
+    display: block;
+    font-size: 5rem;
 }
 
 #projects img{
@@ -166,7 +176,7 @@ input, textarea{
     display: block;
     margin: 20px auto;
     padding: 5px 10px;
-    width: 90%;
+    width: 75%;
 }
 
 footer{
@@ -234,20 +244,6 @@ footer p{
         width: 30%;
         margin: 0;
     }
-    
-
-    /***services.html***/    
-    .services-content{
-        margin: 0 auto;
-    }
-    
-    /***project.html***/
-    .gallery{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-    }
-
 }
 
 @media (min-width: 1024px){
@@ -296,23 +292,24 @@ footer p{
         margin-bottom: 50px;
     }
 
-    #services .services-content{
+    #services .grid-3-col{
+        width: 95%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin-bottom: 50px;
     }
 
-    .services-content p{
+    #services .grid-3-col p{
         padding: 0px 50px 0 50px;
     }
 
     .projects-gallery{
-        display: flex !important;
-        justify-content: space-evenly !important;
+        display: flex;
+        justify-content: space-evenly;
     }
 
     #projects img{
-        width: 300px;
+        width: 40vw;
         padding: 0 25px;
     }
 
@@ -322,70 +319,7 @@ footer p{
     }
 
     #certifications img{
-        width: 300px;
+        width: 40vw;
         margin: 0 50px 10px 20px;
     }
-
-    /***history.html***/    
-    .history-page{
-        display: grid;
-        grid-template-areas:
-            "pic1 text1"
-            "text2 pic2"
-            "text3 text3";
-        align-items: center;
-        justify-items: center;
-    }
-
-    .pic1{
-        grid-area: pic1;      
-    }
-    
-    .pic2{
-        grid-area: pic2;
-    }
-
-    .text1{
-        grid-area: text1;
-        padding: 0 50px;
-    }
-
-    .text2{
-        grid-area: text2;
-        padding: 0 50px;
-    }
-
-    .text3{
-        grid-area: text3;
-        padding: 0 100px;
-    }
-
-    /***services.html***/
-    .services-content{
-        width: 600px;
-    }
-
-
-    /***projects.html***/
-    .gallery{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    /***certifications.html***/
-    #certifications-page{
-        display: grid;
-        grid-template-areas:
-            "pic1 text1"
-            "text2 pic2"
-            "pic3 text3";
-        align-items: center;
-        justify-items: center;
-    }
-
-      /***certifications.html***/
-      #certifications-page img{
-        width: 33.33vw;
-    }
-
 }
