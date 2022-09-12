@@ -31,7 +31,7 @@
 /*------PROJECTS.HTML FROM HERE------*/
 .projects-intro {
   margin-bottom: 10vh;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 0 1vh; }
 
 .gallery {
@@ -54,14 +54,30 @@
   padding: 0 50px; }
 
 #certifications-page img {
-  width: 50vw;
+  width: 75vw;
   margin: 5vh 0; }
 
 #certifications-page h3 {
   margin-bottom: 2.5vh; }
 
 #certifications-page h4 {
-  margin-bottom: 5vh; }
+  margin-bottom: 2.5vh; }
+
+.recommendations1, .recommendations2, .recommendations3 {
+  display: flex;
+  flex-direction: column; }
+
+.quoting {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center; }
+
+.quoting img {
+  width: 50% !important;
+  border-radius: 50%; }
+
+.quoting p {
+  font-size: 0.85rem; }
 
 @media (min-width: 768px) {
   /***services.html***/
@@ -105,10 +121,24 @@
   /***certifications.html***/
   #certifications-page {
     display: grid;
-    grid-template-areas: "pic1 text1" "text2 pic2" "pic3 text3";
+    grid-template-areas: "cert1 recommendations1" "recommendations2 cert2" "cert3 recommendations3";
     align-items: center;
     justify-items: center; }
-  /***certifications.html***/
+  .cert1 {
+    grid-area: cert1; }
+  .cert2 {
+    grid-area: cert2; }
+  .cert3 {
+    grid-area: cert3; }
+  .recommendations1 {
+    grid-area: recommendations1;
+    padding: 0 50px; }
+  .recommendations2 {
+    grid-area: recommendations2;
+    padding: 0 50px; }
+  .recommendations3 {
+    grid-area: recommendations3;
+    padding: 0 50px; }
   #certifications-page img {
     width: 33.33vw; } }
 
@@ -292,20 +322,23 @@ body {
   background-size: 25px 25px;
   font-size: 0.75em; }
 
-button, .form-button {
+.quote {
+  font-style: italic; }
+
+.boton, .form-button {
   border: solid 2px;
   border-radius: 5px;
   background-color: rgba(47, 47, 47, 0.75);
   color: #71db77;
   padding: 10px 20px;
   margin-top: 25px; }
-  button:hover, .form-button:hover {
+  .boton:hover, .form-button:hover {
     background-color: #71db77;
     color: black;
     border: solid 2px #000000;
     font-weight: bold; }
 
-button:hover .fa-solid, .form-button:hover .fa-solid {
+.boton:hover .fa-solid, .form-button:hover .fa-solid {
   color: #000000; }
 
 #myBtn {
@@ -325,8 +358,7 @@ header, footer {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  padding: 0 25px;
-  height: 90vh; }
+  padding: 0 25px; }
 
 .form-button {
   background-color: #71db77;
@@ -338,7 +370,7 @@ header, footer {
     border: solid 2px #000000;
     font-weight: bold; }
 
-h2 {
+h1, h2 {
   padding: 0 1vh;
   margin-bottom: 50px;
   font-size: 2rem;
@@ -350,12 +382,9 @@ h3 {
 .wrapper {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; }
-
-.content {
+  flex-direction: column;
   flex-grow: 1;
-  justify-items: center;
-  align-items: center; }
+  justify-items: center; }
 
 img {
   max-width: 100%; }

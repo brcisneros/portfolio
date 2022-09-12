@@ -31,7 +31,11 @@ body{
     font-size: 0.75em;
 }
 
-button{
+.quote{
+    font-style: italic;
+}
+
+.boton{
     @include round-border(solid 2px, 5px);
     background-color: $button-color;
     color: $button-text;
@@ -46,7 +50,7 @@ button{
     }
 }
 
-button:hover .fa-solid{
+.boton:hover .fa-solid{
     color: #000000;
 }
 
@@ -70,11 +74,10 @@ header, footer{
     align-items: center;
     margin-bottom: 50px;
     padding: 0 25px;
-    height: 90vh;
 }
 
 .form-button{
-    @extend button;
+    @extend .boton;
     background-color: $button-color-alt;
     color: $button-text-alt;
     border: solid 1px #71db77;
@@ -87,7 +90,7 @@ header, footer{
     }
 }
 
-h2{
+h1, h2{
     padding: 0 1vh;
     margin-bottom: 50px;   
     font-size: 2rem;
@@ -102,12 +105,8 @@ h3{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.content{
     flex-grow: 1;
     justify-items: center;
-    align-items: center;
 }
 
 img{

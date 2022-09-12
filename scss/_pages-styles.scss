@@ -42,7 +42,7 @@
 
 .projects-intro{
     margin-bottom: 10vh;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 0 1vh;
 }
 
@@ -71,7 +71,7 @@
 }
 
 #certifications-page img{
-    width: 50vw;
+    width: 75vw;
     margin: 5vh 0;
 }
 
@@ -80,7 +80,27 @@
 }
 
 #certifications-page h4{
-    margin-bottom: 5vh;
+    margin-bottom: 2.5vh;
+}
+
+.recommendations1, .recommendations2, .recommendations3{
+    display: flex;
+    flex-direction: column;
+}
+
+.quoting{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.quoting img{
+    width: 50% !important;
+    border-radius: 50%;
+}
+
+.quoting p{
+    font-size: 0.85rem;
 }
 
 @media (min-width: 768px){
@@ -154,15 +174,41 @@
     #certifications-page{
         display: grid;
         grid-template-areas:
-            "pic1 text1"
-            "text2 pic2"
-            "pic3 text3";
+            "cert1 recommendations1"
+            "recommendations2 cert2"
+            "cert3 recommendations3";
         align-items: center;
         justify-items: center;
     }
 
-      /***certifications.html***/
-      #certifications-page img{
+    .cert1{
+        grid-area: cert1;      
+    }
+    
+    .cert2{
+        grid-area: cert2;
+    }
+
+    .cert3{
+        grid-area: cert3;
+    }
+
+    .recommendations1{
+        grid-area: recommendations1;
+        padding: 0 50px;
+    }
+
+    .recommendations2{
+        grid-area: recommendations2;
+        padding: 0 50px;
+    }
+
+    .recommendations3{
+        grid-area: recommendations3;
+        padding: 0 50px;
+    }
+
+    #certifications-page img{
         width: 33.33vw;
     }
 }
