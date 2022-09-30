@@ -328,20 +328,20 @@ body {
 .blur {
   filter: blur(1.5px); }
 
-.boton, .form-button, button {
+.boton, button {
   border: solid 2px;
   border-radius: 5px;
   background-color: rgba(47, 47, 47, 0.75);
   color: #71db77;
   padding: 10px 20px;
   margin-top: 25px; }
-  .boton:hover, .form-button:hover, button:hover {
+  .boton:hover, button:hover {
     background-color: #71db77;
     color: black;
     border: solid 2px #000000;
     font-weight: bold; }
 
-.boton:hover .fa-solid, .form-button:hover .fa-solid {
+.boton:hover .fa-solid {
   color: #000000; }
 
 #myBtn {
@@ -362,16 +362,6 @@ header, footer {
   align-items: center;
   margin-bottom: 50px;
   padding: 0 25px; }
-
-.form-button {
-  background-color: #71db77;
-  color: black;
-  border: solid 1px #71db77; }
-  .form-button:hover {
-    background-color: rgba(47, 47, 47, 0.75);
-    color: #71db77;
-    border: solid 2px #000000;
-    font-weight: bold; }
 
 h1, h2 {
   padding: 0 1vh;
@@ -435,12 +425,6 @@ header {
   width: 20%;
   margin: 20px; }
 
-.contact-form {
-  width: 100%; }
-
-form {
-  filter: blur(2px); }
-
 input, textarea {
   display: block;
   margin: 20px auto;
@@ -474,18 +458,20 @@ footer p {
     width: 100%;
     display: flex;
     justify-content: space-evenly; }
-  .grid-3-col {
+  .grid-4-col {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "whatsapp contact-form email";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "whatsapp linkedin github email";
     align-items: center;
     justify-items: center; }
   .whatsapp {
     grid-area: whatsapp; }
-  .contact-form {
-    grid-area: contact-form; }
   .email {
     grid-area: email; }
+  .github {
+    grid-area: github; }
+  .linkedin {
+    grid-area: linkedin; }
   #contact img {
     width: 30%;
     margin: 0; } }
