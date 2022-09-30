@@ -35,7 +35,11 @@ body{
     font-style: italic;
 }
 
-.boton{
+.blur{
+    filter: blur(1.5px);
+}
+
+.boton, button{
     @include round-border(solid 2px, 5px);
     background-color: $button-color;
     color: $button-text;
@@ -171,11 +175,16 @@ header{
     width: 100%;
 }
 
+form{
+    filter: blur(2px);
+}
+
 input, textarea{
     display: block;
     margin: 20px auto;
     padding: 5px 10px;
     width: 75%;
+    color: #000000;
 }
 
 footer{

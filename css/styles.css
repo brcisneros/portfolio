@@ -325,14 +325,17 @@ body {
 .quote {
   font-style: italic; }
 
-.boton, .form-button {
+.blur {
+  filter: blur(1.5px); }
+
+.boton, .form-button, button {
   border: solid 2px;
   border-radius: 5px;
   background-color: rgba(47, 47, 47, 0.75);
   color: #71db77;
   padding: 10px 20px;
   margin-top: 25px; }
-  .boton:hover, .form-button:hover {
+  .boton:hover, .form-button:hover, button:hover {
     background-color: #71db77;
     color: black;
     border: solid 2px #000000;
@@ -435,11 +438,15 @@ header {
 .contact-form {
   width: 100%; }
 
+form {
+  filter: blur(2px); }
+
 input, textarea {
   display: block;
   margin: 20px auto;
   padding: 5px 10px;
-  width: 75%; }
+  width: 75%;
+  color: #000000; }
 
 footer {
   display: flex;
